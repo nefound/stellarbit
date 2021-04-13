@@ -33,7 +33,7 @@ public class PageWithSelectBox {
         return base.getText(PAGE_CONTENT);
     }
 
-    public PageWithSelectBox waitForText(long waitTimeInSeconds, long checkIntervalInSeconds) {
+    public PageWithSelectBox waitForResponse(long waitTimeInSeconds, long checkIntervalInSeconds) {
         try {
             WebDriverWait webDriverWait = new WebDriverWait(base.getDriver(), waitTimeInSeconds, checkIntervalInSeconds * 1000);
             webDriverWait.until(ExpectedConditions.invisibilityOfElementWithText(PAGE_CONTENT, WAITING_TEXT));

@@ -35,7 +35,7 @@ public class TestCheckFormWithSelectBox extends TestBase {
         pageWithSelectBox
                 .selectUrlByValue(value)
                 .clickLoad()
-                .waitForText(120, 5);
+                .waitForResponse(120, 5);
         String text = pageWithSelectBox.getMessage();
         Assert.assertEquals("Message doesn't respond to expected", text, success);
     }
